@@ -109,7 +109,7 @@ export const useAppStore = defineStore({
       states.forEach((stat) => {
         this.setSitesCount(stat);
         this.initCount++;
-        if (stat === 'statCloudStorageUser') {
+        if (stat === 'statUser') {
           return;
         } // 去除不必要的数据请求
         this.setTotalCount(stat);
@@ -224,7 +224,7 @@ export const useAppStore = defineStore({
         getAmount(stat, res.data.yaxis);
         this[stat].propertyList = res.data.xaxis;
         this[stat].totalCount = res.data.yaxis;
-        return res;
+        return res.data;
       } finally {
         this.rqCount++;
       }

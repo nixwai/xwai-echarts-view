@@ -34,17 +34,6 @@ export const siteNames = Object.values(siteObj);
 /**
  * 目标
  */
-// export enum STAT {
-//   CloudStorageService = 'statCloudStorageService', // 云存储购买数
-//   CloudStorageAmount = 'statCloudStorageAmount', // 云存储购总额
-//   CloudStorageUser = 'statCloudStorageUser', // 云存储购买用户数
-//   Device = 'statDevice', // 设备总数
-//   User = 'statUser' // 用户总数
-// }
-
-/**
- * 目标
- */
 export type STAT =
   | 'statCloudStorageService' // 云存储购买数
   | 'statCloudStorageAmount' // 云存储购总额

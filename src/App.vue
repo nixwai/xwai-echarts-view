@@ -1,30 +1,37 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <hello-world msg="Vite + Vue" />
+  <loading-view
+    v-if="rqCount === 0 || rqCount < initCount"
+    :rq-count="rqCount"
+    :init-count="initCount"
+  />
+  <home-view v-else class="animate-fadeIn" />
 </template>
 
+<script lang="ts" setup>
+import HomeView from '@/views/HomeView.vue';
+import { computed } from 'vue';
+import { useAppStore } from './store';
+import LoadingView from './views/LoadingView.vue';
+
+const useStore = useAppStore();
+
+const rqCount = computed(() => useStore.getRqCount);
+const initCount = computed(() => useStore.getInitCount);
+
+useStore.setInitData();
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.animate-fadeIn {
+  animation: fadeIn ease 2s;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 </style>

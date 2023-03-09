@@ -1,4 +1,4 @@
-export const countriesCoordMap = {
+export const countriesCoordMap: { [x: string]: [number, number] } = {
   北京: [116.404184, 39.914578],
   台湾: [120, 21],
   广东: [113, 23],

@@ -56,7 +56,7 @@ export const deviceObj = {
 /**
  * 国家
  */
-export const countryObj = {
+export const countryObj: { [x: string]: string } = {
   other: '其他',
   AD: '安道尔',
   AE: '阿拉伯联合酋长国',
