@@ -1,7 +1,7 @@
 <template>
   <div
-    class="p-4 bg-white border-2 border-solid rounded-md cursor-pointer"
-    :style="{ borderColor: showBorder ? color : '#fff' }"
+    class="p-4 border-3 border-solid rounded-md cursor-pointer base-card"
+    :style="{ borderColor: showBorder ? color : 'rgb(239, 241, 245)' }"
   >
     <div class="flex items-center justify-between">
       <div class="w-12 h-12 p-3 rounded-full" :style="{ background: color }">
@@ -27,3 +27,11 @@ defineProps<{
   showBorder: boolean;
 }>();
 </script>
+
+<style scoped>
+.base-card {
+  background-color: rgb(239, 241, 245);
+  box-shadow: 7px 7px 12px rgba(206, 206, 206, 0.4), -7px -7px 12px rgba(255, 255, 255, 0.9),
+    inset 0 0 0 rgba(255, 255, 255, 0.9), inset 0 0 0 rgba(0, 0, 0, 0.4);
+}
+</style>
