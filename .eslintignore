@@ -9,5 +9,6 @@ dist
 .local
 !.env-config.ts
 components.d.ts
+auto-imports.d.ts
 *.yaml
 index.html
