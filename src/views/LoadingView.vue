@@ -8,7 +8,7 @@
         src="@/assets/loading_circle_inner.png"
         alt="in"
       />
-      <img src="@/assets/logo.png" alt="logo" />
+      <img src="@/assets/logo.svg" alt="logo" class="w-16 h-16" />
     </div>
     <div class="mt-4 text-blue-400">正在获取最新数据...</div>
     <div class="mt-4 text-blue-400">请稍等（{{ rqCount + '/' + initCount }}）</div>

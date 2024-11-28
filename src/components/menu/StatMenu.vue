@@ -56,14 +56,14 @@ const statData: {
   {
     dataId: 'statCloudStorageService',
     img: serviceIcon,
-    title: '套餐订阅',
+    title: '订阅',
     count: 0,
     color: '#899adb'
   },
   {
     dataId: 'statCloudStorageAmount',
     img: dollarIcon,
-    title: '套餐收益',
+    title: '收益',
     count: 0,
     color: '#cebc76'
   }

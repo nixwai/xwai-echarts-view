@@ -94,7 +94,6 @@ export const useAppStore = defineStore({
     },
     /**
      * 初始化所有数据,根据内容提前加载好数据
-     * TODO 可能需要优化的内容，怪怪的。initCount统计初始化的接口数量
      */
     setInitData() {
       this.rqCount = 0;
@@ -121,9 +120,6 @@ export const useAppStore = defineStore({
         siteList.forEach((site) => {
           this.setPropertyHistoryIncrement(stat, site);
           this.initCount++;
-          if (stat === 'statUser') {
-            return;
-          } // 去除不必要的数据请求
           this.setPropertyCount(stat, site);
           this.initCount++;
         });
